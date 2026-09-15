@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <title>Движ Баку — мерч</title>
+  <meta name="description" content="Движ Баку — официальный мерч сообщества. Баку, улицы, музыка и свои люди.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Движ Баку">ДВИЖ БАКУ</a>
+    <nav>
+      <a href="#catalog">Мерч</a>
+      <a href="#story">О движении</a>
+      <a href="#delivery">Доставка</a>
+    </nav>
+    <button class="cart-btn" id="openCart" aria-label="Открыть корзину">
+      КОРЗИНА <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-noise"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">BAKU / AZERBAIJAN / 2026</p>
+        <h1>Баку.<br><span>Это наш Движ.</span></h1>
+        <p class="hero-text">След города, который остаётся с тобой.</p>
+        <a class="primary-btn" href="#catalog">СМОТРЕТЬ МЕРЧ <span>↓</span></a>
+      </div>
+      <div class="hero-art">
+        <img src="assets/logo-baku.jpeg" alt="">
+      </div>
+      <div class="hero-scroll">Arif / ДВИЖ БАКУ</div>
+    </section>
+
+    <section class="manifesto" id="story">
+      <div class="section-kicker">01 — ПРО НАС</div>
+      <div class="manifesto-grid">
+        <h2>Город.<br>Музыка.<br><em>Люди.</em></h2>
+        <div>
+          <p>Движ Баку — это не магазин и не просто логотип на ткани. Это люди, которые встречаются на одной волне.</p>
+          <p>Мы собрали первый дроп так, чтобы его можно было носить каждый день — на концерте, на улице, у моря, в дороге.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="catalog" id="catalog">
+      <div class="catalog-head">
+        <div>
+          <div class="section-kicker">02 — FIRST DROP</div>
+          <h2>Мерч <span>Движ Баку</span></h2>
+        </div>
+        <p>Ограниченный первый дроп.<br>Размеры: M / L / XL / XXL</p>
+      </div>
+
+      <div class="products" id="products"></div>
+    </section>
+
+    <section class="lookbook">
+      <div class="lookbook-title">
+        <div class="section-kicker">03 — НА УЛИЦАХ</div>
+        <h2>Носи город<br><em>с собой.</em></h2>
+      </div>
+      <div class="look-grid">
+        <figure class="look tall"><img src="assets/white-pink.jpg" alt="Белая футболка Движ Баку"></figure>
+        <figure class="look"><img src="assets/black-yellow.jpg" alt="Чёрная футболка Движ Баку"></figure>
+        <figure class="look"><img src="assets/white-yellow.jpg" alt="Белая футболка Движ Баку"></figure>
+        <figure class="look"><img src="assets/baku-backprint.jpg" alt="Дизайн Движ Баку с силуэтом города"></figure>
+      </div>
+    </section>
+
+    <section class="delivery" id="delivery">
+      <div class="section-kicker">04 — ЗАКАЗ</div>
+      <h2>Забирай.<br><em>Носи.</em><br>Двигайся.</h2>
+      <div class="delivery-cards">
+        <article><span>01</span><h3>ЗАКАЗ</h3><p>Выбираешь модель и размер, добавляешь в корзину.</p></article>
+        <article><span>02</span><h3>ОПЛАТА</h3><p>После выбора мерча перейдите в корзину и напишите нам для оплаты.</p></article>
+        <article><span>03</span><h3>ПОЛУЧЕНИЕ</h3><p>Условия доставки/самовывоза согласуем с тобой в сообщениях.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-logo"><span>ДВИЖ БАКУ</span></div>
+    <div>
+      <div class="section-kicker">НА СВЯЗИ</div>
+      <p class="footer-note"><a href="https://t.me/dvizh_merch" target="_blank" rel="noopener">Telegram</a> · <a href="https://www.instagram.com/27.1.004/" target="_blank" rel="noopener">Instagram</a></p>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 DVIZH BAKU</span>
+      <span>MADE IN Arif</span>
+    </div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="drawer" id="cartDrawer" aria-label="Корзина">
+    <div class="drawer-head"><h2>Корзина</h2><button id="closeCart">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="total"><span>ТОВАРЫ</span><strong id="cartTotal">0 AZN</strong></div>
+      <p class="cart-delivery-note">Доставка по Баку — 3 AZN • бесплатно от 50 AZN</p>
+      <button class="primary-btn full" id="checkout">ОФОРМИТЬ ЗАКАЗ</button>
+      <p class="small">После выбора мерча перейдите в корзину и напишите нам для оплаты.</p>
+    </div>
+  </aside>
+
+  <div class="modal" id="productModal">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModal">×</button>
+      <div id="modalMedia"></div>
+      <div class="modal-info">
+        <div class="section-kicker" id="modalType">DVIZH BAKU</div>
+        <h2 id="modalName"></h2>
+        <div class="modal-price" id="modalPrice"></div>
+        <div id="sizeArea"></div>
+        <button class="primary-btn full" id="addToCart">ДОБАВИТЬ В КОРЗИНУ</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="checkoutModal">
+    <div class="modal-card checkout-card">
+      <button class="modal-close" id="closeCheckout">×</button>
+      <div class="modal-info wide">
+        <div class="section-kicker">ОФОРМЛЕНИЕ</div>
+        <h2>Оставь данные.</h2>
+        <p class="muted">Доставка только по Баку: 3 AZN. При заказе от 50 AZN — бесплатно. Самовывоза и доставки в регионы нет. После оформления менеджер отправит реквизиты оплаты.</p>
+        <form id="orderForm">
+          <label>ИМЯ<input name="name" required placeholder="Твоё имя"></label>
+          <label>ТЕЛЕФОН<input name="phone" required placeholder="+994 ..."></label>
+          <label>СПОСОБ ПОЛУЧЕНИЯ
+            <select name="delivery">
+              <option>Доставка по Баку</option>
+            </select>
+          </label>
+          <label>КОММЕНТАРИЙ<textarea name="comment" rows="3" placeholder="Например: удобное время связи"></textarea></label>
+          <button class="primary-btn full" type="submit">СФОРМИРОВАТЬ ЗАКАЗ</button>
+        </form>
+        <div id="orderResult" class="order-result hidden"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
